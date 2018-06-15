@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Court Counter</string>
+    <string name="manchester">manchester</string>
+    <string name="chelsea">chelsea</string>
+    <string name="possession">possession</string>
+    <string name="yellow_card">Yellow Card</string>
+    <string name="red_card">Red Card</string>
+    <string name="fouls">Fouls</string>
+    <string name="corner_kicks">Corner Kicks</string>
+    <string name="subs">Substitutions</string>
+    <string name="reset">Reset</string>
+    <string name="home_yellow">0</string>
+    <string name="home_red">0</string>
+    <string name="possession_home">70%</string>
+    <string name="substitutions_home">2</string>
+    <string name="cornerKicks_home">4</string>
+    <string name="possession_away">45%</string>
+    <string name="away_red">0</string>
+    <string name="cornerKicks_away">1</string>
+    <string name="Substitutions_away">3</string>
+    <string name="away_yellow">2</string>
+    <string name="Scores">5-1</string>
+</resources>

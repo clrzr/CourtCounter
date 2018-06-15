@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/Manchester"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/divider"
+        android:layout_alignStart="@+id/yel"
+        android:background="@drawable/round_corner"
+        android:contentDescription="@string/manchester"
+        android:hapticFeedbackEnabled="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/manchester" />
+
+    <ImageButton
+        android:id="@+id/Chelsea"
+        android:layout_width="80dp"
+        android:layout_height="69dp"
+        android:layout_alignEnd="@+id/yel_left"
+        android:layout_alignTop="@+id/Manchester"
+        android:background="@drawable/round_corner"
+        android:contentDescription="@string/manchester"
+        android:hapticFeedbackEnabled="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/chelsea" />
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="470dp"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:background="@android:color/darker_gray" />
+
+    <ImageView
+        android:id="@+id/pos"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/Manchester"
+        android:layout_marginTop="91dp"
+        android:clickable="true"
+        android:contentDescription="@string/possession"
+        android:focusable="true"
+        android:src="@drawable/possession" />
+
+    <ImageView
+        android:id="@+id/yel"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/pos"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/yellow_card"
+        android:focusable="true"
+        android:src="@drawable/yellow_card" />
+
+    <ImageView
+        android:id="@+id/red"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/yel"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/red_card"
+        android:focusable="true"
+        android:src="@drawable/red_card" />
+
+    <ImageView
+        android:id="@+id/subs"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/conner"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/subs"
+        android:focusable="true"
+        android:src="@drawable/sub" />
+
+    <ImageView
+        android:id="@+id/conner"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/red"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/corner_kicks"
+        android:focusable="true"
+        android:src="@drawable/corner_kick" />
+
+    <TextView
+        android:id="@+id/pos_home"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/red_home"
+        android:layout_marginTop="103dp"
+        android:background="@drawable/round_corner3"
+        android:text="@string/possession_home"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/yel_home"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pos_home"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="49dp"
+        android:layout_toEndOf="@+id/yel"
+        android:background="@drawable/round_corner3"
+        android:text="@string/home_yellow"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/red_home"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/yel_home"
+        android:layout_centerVertical="true"
+        android:background="@drawable/round_corner3"
+        android:text="@string/home_red"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/conner_home"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/pos_home"
+        android:layout_marginBottom="204dp"
+        android:background="@drawable/round_corner3"
+        android:text="@string/cornerKicks_home"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/subs_home"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/pos_home"
+        android:layout_marginBottom="123dp"
+        android:background="@drawable/round_corner3"
+        android:text="@string/substitutions_home"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/pos_left"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignEnd="@+id/Chelsea"
+        android:layout_alignTop="@+id/pos"
+        android:clickable="true"
+        android:contentDescription="@string/possession"
+        android:focusable="true"
+        android:src="@drawable/possession" />
+
+    <ImageView
+        android:id="@+id/yel_left"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/pos"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/yellow_card"
+        android:focusable="true"
+        android:src="@drawable/yellow_card" />
+
+    <ImageView
+        android:id="@+id/red_left"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/yel"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/red_card"
+        android:focusable="true"
+        android:src="@drawable/red_card" />
+
+    <ImageView
+        android:id="@+id/subs_left"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/conner"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/subs"
+        android:focusable="true"
+        android:src="@drawable/sub" />
+
+    <ImageView
+        android:id="@+id/conner_left"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/red"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        android:contentDescription="@string/corner_kicks"
+        android:focusable="true"
+        android:src="@drawable/corner_kick" />
+
+    <TextView
+        android:id="@+id/pos_away"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/divider"
+        android:layout_alignTop="@+id/pos_home"
+        android:layout_marginStart="14dp"
+        android:background="@drawable/round_corner4"
+        android:text="@string/possession_away"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/yel_away"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/yel"
+        android:layout_toStartOf="@+id/Chelsea"
+        android:background="@drawable/round_corner4"
+        android:text="@string/away_yellow"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/red_away"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/pos_away"
+        android:layout_centerVertical="true"
+        android:background="@drawable/round_corner4"
+        android:text="@string/away_red"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/conner_away"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/pos_away"
+        android:layout_alignTop="@+id/conner_home"
+        android:background="@drawable/round_corner4"
+        android:text="@string/cornerKicks_away"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/subs_away"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/pos_away"
+        android:layout_alignTop="@+id/subs_home"
+        android:background="@drawable/round_corner4"
+        android:text="@string/Substitutions_away"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/Champions_League"
+        android:layout_width="150dp"
+        android:layout_height="49dp"
+        android:layout_below="@+id/divider"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_corner2"
+        android:drawablePadding="-15dp"
+        android:drawableStart="@drawable/icon"
+        android:text="@string/reset"
+        android:textAllCaps="true"
+        android:textColor="#FFFFFF"
+        android:textSize="27sp" />
+
+    <TextView
+        android:id="@+id/score_board"
+        android:layout_width="190dp"
+        android:layout_height="49dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/round_corner5"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/Scores"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
