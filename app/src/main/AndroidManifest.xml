@@ -9,12 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:fullBackupContent="@xml/backup_descriptor"
-        android:theme="@style/AppTheme">
+        android:theme="@style/App_Theme">
         <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme">
+            android:theme="@style/App_Theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
