@@ -6,22 +6,22 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private int poss_home = 0;
-    private int yell_home = 0;
-    private int redd_home = 0;
-    private int subst_home = 0;
+    private int possessionHome = 0;
+    private int yellowCard_home = 0;
+    private int redCard_home = 0;
+    private int substitutionsHome = 0;
     private int connerK_home = 0;
     private int connerK_away = 0;
-    private int subst_away = 0;
-    private int redd_away = 0;
-    private int yell_away = 0;
-    private int poss_away = 0;
-    private int goal_home = 0;
-    private int goal_away = 0;
-    private String home = "0";
-    private String away = "0";
-    private String homePos = "";
-    private String awayPos = "";
+    private int substitutionsAway = 0;
+    private int redCard_away = 0;
+    private int yellowCard_away = 0;
+    private int possessionAway = 0;
+    private int goalHome = 0;
+    private int goalAway = 0;
+    private String goalHome_toString = "0";
+    private String goalAway_toString = "0";
+    private String possessionHome_toString = "";
+    private String possessionAway_toString = "";
 
 
     @Override
@@ -34,174 +34,174 @@ public class MainActivity extends AppCompatActivity {
      * The Buttons.
      */
     public void reset(View view) {
-        home = "0";
-        away = "0";
-        homePos="0%";
-        awayPos="0%";
-        goal_home = 0;
-        goal_away = 0;
-        poss_home = 0;
-        yell_home = 0;
-        redd_home = 0;
-        subst_home = 0;
+        goalHome_toString = "0";
+        goalAway_toString = "0";
+        possessionHome_toString ="0%";
+        possessionAway_toString ="0%";
+        goalHome = 0;
+        goalAway = 0;
+        possessionHome = 0;
+        yellowCard_home = 0;
+        redCard_home = 0;
+        substitutionsHome = 0;
         connerK_home = 0;
         connerK_away = 0;
-        subst_away = 0;
-        redd_away = 0;
-        yell_away = 0;
-        poss_away = 0;
-        dis_pH(homePos);
-        dis_rH(redd_home);
-        dis_yH(yell_home);
-        dis_sH(subst_home);
-        dis_cH(connerK_home);
-        dis_pA(awayPos);
-        dis_yA(yell_away);
-        dis_rA(redd_away);
-        dis_sA(subst_away);
-        dis_cA(connerK_away);
-        dis_goalH(home);
-        dis_goalA(away);
+        substitutionsAway = 0;
+        redCard_away = 0;
+        yellowCard_away = 0;
+        possessionAway = 0;
+        display_possessionHome(possessionHome_toString);
+        display_redHome(redCard_home);
+        display_yellowHome(yellowCard_home);
+        display_substitutionsHome(substitutionsHome);
+        display_connerHome(connerK_home);
+        display_possessionAway(possessionAway_toString);
+        display_yellowAway(yellowCard_away);
+        display_redAway(redCard_away);
+        display_substitutionsAway(substitutionsAway);
+        display_connerAway(connerK_away);
+        display_goalHome(goalHome_toString);
+        display_goalAway(goalAway_toString);
     }
 
     /**
      * Home Buttons.
      */
 
-    public void homeGoal(View view) {
-        goal_home = goal_home + 1;
-        home = "" + goal_home;
-        dis_goalH(home);
+    public void goalHome_increment(View view) {
+        goalHome = goalHome + 1;
+        goalHome_toString = "" + goalHome;
+        display_goalHome(goalHome_toString);
     }
 
-    public void homePos(View view) {
-        poss_home = poss_home + 1;
-        homePos = poss_home + "%";
-        dis_pH(homePos);
+    public void possessionHome_increment(View view) {
+        possessionHome = possessionHome + 1;
+        possessionHome_toString = possessionHome + "%";
+        display_possessionHome(possessionHome_toString);
     }
 
-    public void homeYellow(View view) {
-        yell_home = yell_home + 1;
-        dis_yH(yell_home);
+    public void yellowHome_increment(View view) {
+        yellowCard_home = yellowCard_home + 1;
+        display_yellowHome(yellowCard_home);
     }
 
-    public void homeRed(View view) {
-        redd_home = redd_home + 1;
-        dis_rH(redd_home);
+    public void redHome_increment(View view) {
+        redCard_home = redCard_home + 1;
+        display_redHome(redCard_home);
     }
 
-    public void homeSub(View view) {
-        subst_home = subst_home + 1;
-        dis_sH(subst_home);
+    public void substitutionsHome_increment(View view) {
+        substitutionsHome = substitutionsHome + 1;
+        display_substitutionsHome(substitutionsHome);
     }
 
-    public void homeCK(View view) {
+    public void ckHome_increment(View view) {
         connerK_home = connerK_home + 1;
-        dis_cH(connerK_home);
+        display_connerHome(connerK_home);
     }
 
     /**
      * Away Buttons.
      */
 
-    public void awayGoal(View view) {
-        goal_away = goal_away + 1;
-        away = "" + goal_away;
-        dis_goalA(away);
+    public void goalAway_increment(View view) {
+        goalAway = goalAway + 1;
+        goalAway_toString = "" + goalAway;
+        display_goalAway(goalAway_toString);
     }
 
-    public void awayPos(View view) {
-        poss_away = poss_away + 1;
-        awayPos = poss_away + "%";
-        dis_pA(awayPos);
+    public void possessionAway_increment(View view) {
+        possessionAway = possessionAway + 1;
+        possessionAway_toString = possessionAway + "%";
+        display_possessionAway(possessionAway_toString);
     }
 
-    public void awayYellow(View view) {
-        yell_away = yell_away + 1;
-        dis_yA(yell_away);
+    public void yellowAway_increment(View view) {
+        yellowCard_away = yellowCard_away + 1;
+        display_yellowAway(yellowCard_away);
     }
 
-    public void awayRed(View view) {
-        redd_away = redd_away + 1;
-        dis_rA(redd_away);
+    public void redAway_increment(View view) {
+        redCard_away = redCard_away + 1;
+        display_redAway(redCard_away);
     }
 
-    public void awaySub(View view) {
-        subst_away = subst_away + 1;
-        dis_sA(subst_away);
+    public void substitutionsAway_increment(View view) {
+        substitutionsAway = substitutionsAway + 1;
+        display_substitutionsAway(substitutionsAway);
     }
 
-    public void awayCK(View view) {
+    public void ckAway_increment(View view) {
         connerK_away = connerK_away + 1;
-        dis_cA(connerK_away);
+        display_connerAway(connerK_away);
     }
 
     /**
      * The Displays. dis_?H
      */
 
-    private void dis_pH(String pH) {
-        TextView q = findViewById(R.id.pos_home);
-        q.setText(getString(R.string.possession_home, pH));
+    private void display_possessionHome(String posHome) {
+        TextView possessionHome_textView = findViewById(R.id.pos_home);
+        possessionHome_textView.setText(getString(R.string.possession_home, posHome));
     }
 
-    private void dis_yH(int yH) {
-        TextView w = findViewById(R.id.yel_home);
-        w.setText(getString(R.string.home_yellow, yH));
+    private void display_yellowHome(int yellowHome) {
+        TextView yellowHome_textView = findViewById(R.id.yel_home);
+        yellowHome_textView.setText(getString(R.string.home_yellow, yellowHome));
     }
 
-    private void dis_rH(int rH) {
-        TextView e = findViewById(R.id.red_home);
-        e.setText(getString(R.string.home_red, rH));
+    private void display_redHome(int redHome) {
+        TextView yellowHome_textView = findViewById(R.id.red_home);
+        yellowHome_textView.setText(getString(R.string.home_red, redHome));
     }
 
-    private void dis_sH(int sH) {
-        TextView r = findViewById(R.id.subs_home);
-        r.setText(getString(R.string.substitutions_home, sH));
+    private void display_substitutionsHome(int subsHome) {
+        TextView substitutionsHome_textView = findViewById(R.id.subs_home);
+        substitutionsHome_textView.setText(getString(R.string.substitutions_home, subsHome));
     }
 
-    private void dis_cH(int cH) {
-        TextView t = findViewById(R.id.conner_home);
-        t.setText(getString(R.string.cornerKicks_home, cH));
+    private void display_connerHome(int ckHome) {
+        TextView connerHome_textView = findViewById(R.id.conner_home);
+        connerHome_textView.setText(getString(R.string.cornerKicks_home, ckHome));
     }
 
-    private void dis_goalH(String home) {
-        TextView y = findViewById(R.id.scoreBoard_text);
-        y.setText(getString(R.string.Scores, home, away));
+    private void display_goalHome(String home) {
+        TextView goalHome_textView = findViewById(R.id.scoreBoard_text);
+        goalHome_textView.setText(getString(R.string.Scores, home, goalAway_toString));
     }
 
     /**
      * dis_?A
      */
 
-    private void dis_pA(String pA) {
-        TextView a = findViewById(R.id.pos_away);
-        a.setText(getString(R.string.possession_away, pA));
+    private void display_possessionAway(String posAway) {
+        TextView possessionAway_textView = findViewById(R.id.pos_away);
+        possessionAway_textView.setText(getString(R.string.possession_away, posAway));
     }
 
-    private void dis_yA(int yA) {
-        TextView s = findViewById(R.id.yel_away);
-        s.setText(getString(R.string.away_yellow, yA));
+    private void display_yellowAway(int yellowAway) {
+        TextView yellowAway_textView = findViewById(R.id.yel_away);
+        yellowAway_textView.setText(getString(R.string.away_yellow, yellowAway));
     }
 
-    private void dis_rA(int rA) {
-        TextView d = findViewById(R.id.red_away);
-        d.setText(getString(R.string.away_red, rA));
+    private void display_redAway(int redAway) {
+        TextView redAway_textView = findViewById(R.id.red_away);
+        redAway_textView.setText(getString(R.string.away_red, redAway));
     }
 
-    private void dis_sA(int sA) {
-        TextView f = findViewById(R.id.subs_away);
-        f.setText(getString(R.string.Substitutions_away, sA));
+    private void display_substitutionsAway(int subsAway) {
+        TextView substitutionsAway_textView = findViewById(R.id.subs_away);
+        substitutionsAway_textView.setText(getString(R.string.Substitutions_away, subsAway));
     }
 
-    private void dis_cA(int cA) {
-        TextView g = findViewById(R.id.conner_away);
-        g.setText(getString(R.string.cornerKicks_away, cA));
+    private void display_connerAway(int ckAway) {
+        TextView connerAway_textView = findViewById(R.id.conner_away);
+        connerAway_textView.setText(getString(R.string.cornerKicks_away, ckAway));
     }
 
-    private void dis_goalA(String away) {
-        TextView y = findViewById(R.id.scoreBoard_text);
-        y.setText(getString(R.string.Scores, home, away));
+    private void display_goalAway(String away) {
+        TextView goalAway_textView = findViewById(R.id.scoreBoard_text);
+        goalAway_textView.setText(getString(R.string.Scores, goalHome_toString, away));
     }
 
 }

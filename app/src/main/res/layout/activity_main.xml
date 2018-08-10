@@ -24,7 +24,7 @@
                 android:background="@drawable/round_corner"
                 android:contentDescription="@string/logo"
                 android:hapticFeedbackEnabled="true"
-                android:onClick="homeGoal"
+                android:onClick="goalHome_increment"
                 android:scaleType="fitCenter"
                 android:src="@drawable/manchester" />
 
@@ -50,7 +50,7 @@
                 android:background="@drawable/round_corner"
                 android:contentDescription="@string/logo"
                 android:hapticFeedbackEnabled="true"
-                android:onClick="awayGoal"
+                android:onClick="goalAway_increment"
                 android:scaleType="fitCenter"
                 android:src="@drawable/chelsea" />
 
@@ -85,7 +85,7 @@
                     android:layout_marginEnd="@dimen/marginEnd"
                     android:background="@drawable/round_corner"
                     android:contentDescription="@string/possession"
-                    android:onClick="homePos"
+                    android:onClick="possessionHome_increment"
                     android:scaleType="fitCenter"
                     android:src="@drawable/possession" />
 
@@ -95,7 +95,7 @@
                     android:layout_marginEnd="@dimen/marginEnd"
                     android:background="@drawable/round_corner"
                     android:contentDescription="@string/yellow_card"
-                    android:onClick="homeYellow"
+                    android:onClick="yellowHome_increment"
                     android:scaleType="fitCenter"
                     android:src="@drawable/yellow_card" />
 
@@ -105,7 +105,7 @@
                     android:layout_marginEnd="@dimen/marginEnd"
                     android:background="@drawable/round_corner"
                     android:contentDescription="@string/red_card"
-                    android:onClick="homeRed"
+                    android:onClick="redHome_increment"
                     android:scaleType="fitCenter"
                     android:src="@drawable/red_card" />
 
@@ -115,7 +115,7 @@
                     android:layout_marginEnd="@dimen/marginEnd"
                     android:background="@drawable/round_corner"
                     android:contentDescription="@string/subs"
-                    android:onClick="homeSub"
+                    android:onClick="substitutionsHome_increment"
                     android:scaleType="fitCenter"
                     android:src="@drawable/sub" />
 
@@ -125,7 +125,7 @@
                     android:layout_marginEnd="@dimen/marginEnd"
                     android:background="@drawable/round_corner"
                     android:contentDescription="@string/corner_kicks"
-                    android:onClick="homeCK"
+                    android:onClick="ckHome_increment"
                     android:scaleType="fitCenter"
                     android:src="@drawable/corner_kick" />
             </LinearLayout>
@@ -212,7 +212,7 @@
                     android:layout_marginStart="@dimen/marginStart"
                     android:background="@drawable/round_corner"
                     android:contentDescription="@string/possession"
-                    android:onClick="awayPos"
+                    android:onClick="possessionAway_increment"
                     android:scaleType="fitCenter"
                     android:src="@drawable/possession" />
 
@@ -222,7 +222,7 @@
                     android:layout_marginStart="@dimen/marginStart"
                     android:background="@drawable/round_corner"
                     android:contentDescription="@string/yellow_card"
-                    android:onClick="awayYellow"
+                    android:onClick="yellowAway_increment"
                     android:scaleType="fitCenter"
                     android:src="@drawable/yellow_card_flip" />
 
@@ -232,7 +232,7 @@
                     android:layout_marginStart="@dimen/marginStart"
                     android:background="@drawable/round_corner"
                     android:contentDescription="@string/red_card"
-                    android:onClick="awayRed"
+                    android:onClick="redAway_increment"
                     android:scaleType="fitCenter"
                     android:src="@drawable/red_card_flip" />
 
@@ -242,7 +242,7 @@
                     android:layout_marginStart="@dimen/marginStart"
                     android:background="@drawable/round_corner"
                     android:contentDescription="@string/subs"
-                    android:onClick="awaySub"
+                    android:onClick="substitutionsAway_increment"
                     android:scaleType="fitCenter"
                     android:src="@drawable/sub_flip" />
 
@@ -252,7 +252,7 @@
                     android:layout_marginStart="@dimen/marginStart"
                     android:background="@drawable/round_corner"
                     android:contentDescription="@string/corner_kicks"
-                    android:onClick="awayCK"
+                    android:onClick="ckAway_increment"
                     android:scaleType="fitCenter"
                     android:src="@drawable/corner_kick_flip" />
             </LinearLayout>
