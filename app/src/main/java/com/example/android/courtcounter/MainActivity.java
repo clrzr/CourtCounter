@@ -1,7 +1,7 @@
 package com.example.android.courtcounter;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
     public void reset(View view) {
         home = "0";
         away = "0";
+        homePos="0%";
+        awayPos="0%";
         goal_home = 0;
         goal_away = 0;
         poss_home = 0;
@@ -169,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * dis?A
+     * dis_?A
      */
 
     private void dis_pA(String pA) {
@@ -203,4 +205,3 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
-
