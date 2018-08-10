@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginTop">12dp</dimen>
+    <dimen name="weightWidth">0dp</dimen>
+    <dimen name="marginBottom">8dp</dimen>
+    <dimen name="marginEnd">4dp</dimen>
+    <dimen name="marginStart">4dp</dimen>
+    <dimen name="teamImage_height">80dp</dimen>
+    <dimen name="infoHub_height">300dp</dimen>
+    <dimen name="infoView_width">90dp</dimen>
+    <dimen name="scoreboardTextView_height">49dp</dimen>
+    <dimen name="textSize">30sp</dimen>
+    <dimen name="dividersWidth">2dp</dimen>
+    <dimen name="statusImage_size">60dp</dimen>
+    <dimen name="leagueImage_size">32dp</dimen>
+    <dimen name="reset_width">150dp</dimen>
+    <dimen name="resetElevation">8dp</dimen>
+    <dimen name="reset_textSize">25sp</dimen>
+</resources>

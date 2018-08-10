@@ -1,345 +1,354 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/scoreBoard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="@drawable/round_corner"
-            android:contentDescription="@string/logo"
-            android:hapticFeedbackEnabled="true"
-            android:onClick="homeGoal"
-            android:scaleType="fitCenter"
-            android:src="@drawable/manchester" />
-
-        <TextView
-            android:id="@+id/scoreBoard_text"
-            android:layout_width="0dp"
-            android:layout_height="49dp"
-            android:layout_gravity="center"
-            android:layout_weight="1.9"
-            android:background="@drawable/round_corner5"
-            android:fontFamily="sans-serif-condensed"
-            android:gravity="center"
-            android:text="@string/initial_sB"
-            android:textAlignment="center"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <ImageButton
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="@drawable/round_corner"
-            android:contentDescription="@string/logo"
-            android:hapticFeedbackEnabled="true"
-            android:onClick="awayGoal"
-            android:scaleType="fitCenter"
-            android:src="@drawable/chelsea" />
-
-    </LinearLayout>
-
     <RelativeLayout
-        android:id="@+id/infoHub"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_below="@id/scoreBoard"
-        android:layout_marginTop="4dp">
+        android:layout_height="wrap_content">
 
-        <View
+        <LinearLayout
+            android:id="@+id/scoreBoard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTop"
+            android:orientation="horizontal">
 
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
+            <ImageButton
+                android:layout_width="@dimen/weightWidth"
+                android:layout_height="@dimen/teamImage_height"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/round_corner"
+                android:contentDescription="@string/logo"
+                android:hapticFeedbackEnabled="true"
+                android:onClick="homeGoal"
+                android:scaleType="fitCenter"
+                android:src="@drawable/manchester" />
+
+            <TextView
+                android:id="@+id/scoreBoard_text"
+                android:layout_width="@dimen/weightWidth"
+                android:layout_height="@dimen/scoreboardTextView_height"
+                android:layout_gravity="center"
+                android:layout_weight="1.9"
+                android:background="@drawable/round_corner5"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="@string/initial_sB"
+                android:textAlignment="center"
+                android:textSize="@dimen/textSize"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:layout_width="@dimen/weightWidth"
+                android:layout_height="@dimen/teamImage_height"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/round_corner"
+                android:contentDescription="@string/logo"
+                android:hapticFeedbackEnabled="true"
+                android:onClick="awayGoal"
+                android:scaleType="fitCenter"
+                android:src="@drawable/chelsea" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/infoHub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:background="@color/colorAccent">
+            android:layout_below="@id/scoreBoard"
+            android:layout_marginTop="@dimen/marginTop">
 
-        </View>
+            <View
+                android:layout_width="@dimen/dividersWidth"
+                android:layout_height="@dimen/infoHub_height"
+                android:layout_centerInParent="true"
+                android:background="@color/colorAccent">
 
-        <LinearLayout
-            android:id="@+id/homeTeam_icons"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:orientation="vertical">
+            </View>
 
-            <ImageButton
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/round_corner"
-                android:contentDescription="@string/possession"
-                android:onClick="homePos"
-                android:scaleType="fitCenter"
-                android:src="@drawable/possession" />
-
-            <ImageButton
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/round_corner"
-                android:contentDescription="@string/yellow_card"
-                android:onClick="homeYellow"
-                android:scaleType="fitCenter"
-                android:src="@drawable/yellow_card" />
-
-            <ImageButton
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/round_corner"
-                android:contentDescription="@string/red_card"
-                android:onClick="homeRed"
-                android:scaleType="fitCenter"
-                android:src="@drawable/red_card" />
-
-            <ImageButton
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/round_corner"
-                android:contentDescription="@string/subs"
-                android:onClick="homeSub"
-                android:scaleType="fitCenter"
-                android:src="@drawable/sub" />
-
-            <ImageButton
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/round_corner"
-                android:contentDescription="@string/corner_kicks"
-                android:onClick="homeCK"
-                android:scaleType="fitCenter"
-                android:src="@drawable/corner_kick" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_toEndOf="@id/homeTeam_icons"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/pos_home"
-                android:layout_width="90dp"
+            <LinearLayout
+                android:id="@+id/homeTeam_icons"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="11dp"
-                android:layout_weight="1"
-                android:background="@drawable/round_corner3"
-                android:gravity="top"
-                android:text="@string/initialPos"
-                android:textAlignment="center"
-                android:textSize="30sp" />
+                android:layout_alignParentStart="true"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/yel_home"
-                android:layout_width="90dp"
+                <ImageButton
+                    android:layout_width="@dimen/statusImage_size"
+                    android:layout_height="@dimen/statusImage_size"
+                    android:layout_marginEnd="@dimen/marginEnd"
+                    android:background="@drawable/round_corner"
+                    android:contentDescription="@string/possession"
+                    android:onClick="homePos"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/possession" />
+
+                <ImageButton
+                    android:layout_width="@dimen/statusImage_size"
+                    android:layout_height="@dimen/statusImage_size"
+                    android:layout_marginEnd="@dimen/marginEnd"
+                    android:background="@drawable/round_corner"
+                    android:contentDescription="@string/yellow_card"
+                    android:onClick="homeYellow"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/yellow_card" />
+
+                <ImageButton
+                    android:layout_width="@dimen/statusImage_size"
+                    android:layout_height="@dimen/statusImage_size"
+                    android:layout_marginEnd="@dimen/marginEnd"
+                    android:background="@drawable/round_corner"
+                    android:contentDescription="@string/red_card"
+                    android:onClick="homeRed"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/red_card" />
+
+                <ImageButton
+                    android:layout_width="@dimen/statusImage_size"
+                    android:layout_height="@dimen/statusImage_size"
+                    android:layout_marginEnd="@dimen/marginEnd"
+                    android:background="@drawable/round_corner"
+                    android:contentDescription="@string/subs"
+                    android:onClick="homeSub"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sub" />
+
+                <ImageButton
+                    android:layout_width="@dimen/statusImage_size"
+                    android:layout_height="@dimen/statusImage_size"
+                    android:layout_marginEnd="@dimen/marginEnd"
+                    android:background="@drawable/round_corner"
+                    android:contentDescription="@string/corner_kicks"
+                    android:onClick="homeCK"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/corner_kick" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/homeTeam_icons"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pos_home"
+                    android:layout_width="@dimen/infoView_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/marginBottom"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner3"
+                    android:gravity="top"
+                    android:text="@string/initialPos"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/yel_home"
+                    android:layout_width="@dimen/infoView_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/marginBottom"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner3"
+                    android:text="@string/initial"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/red_home"
+                    android:layout_width="@dimen/infoView_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/marginBottom"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner3"
+                    android:text="@string/initial"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/subs_home"
+                    android:layout_width="@dimen/infoView_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/marginBottom"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner3"
+                    android:text="@string/initial"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:id="@+id/conner_home"
+                    android:layout_width="@dimen/infoView_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/marginBottom"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner3"
+                    android:gravity="bottom"
+                    android:text="@string/initial"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/textSize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/awayTeam_icons"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="11dp"
-                android:layout_weight="1"
-                android:background="@drawable/round_corner3"
-                android:text="@string/initial"
-                android:textAlignment="center"
-                android:textSize="30sp" />
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/red_home"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="11dp"
-                android:layout_weight="1"
-                android:background="@drawable/round_corner3"
-                android:text="@string/initial"
-                android:textAlignment="center"
-                android:textSize="30sp" />
+                <ImageButton
+                    android:layout_width="@dimen/statusImage_size"
+                    android:layout_height="@dimen/statusImage_size"
+                    android:layout_marginStart="@dimen/marginStart"
+                    android:background="@drawable/round_corner"
+                    android:contentDescription="@string/possession"
+                    android:onClick="awayPos"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/possession" />
 
-            <TextView
-                android:id="@+id/subs_home"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="11dp"
-                android:layout_weight="1"
-                android:background="@drawable/round_corner3"
-                android:text="@string/initial"
-                android:textAlignment="center"
-                android:textSize="30sp" />
+                <ImageButton
+                    android:layout_width="@dimen/statusImage_size"
+                    android:layout_height="@dimen/statusImage_size"
+                    android:layout_marginStart="@dimen/marginStart"
+                    android:background="@drawable/round_corner"
+                    android:contentDescription="@string/yellow_card"
+                    android:onClick="awayYellow"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/yellow_card_flip" />
 
-            <TextView
-                android:id="@+id/conner_home"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="11dp"
-                android:layout_weight="1"
-                android:background="@drawable/round_corner3"
-                android:gravity="bottom"
-                android:text="@string/initial"
-                android:textAlignment="center"
-                android:textSize="30sp" />
-        </LinearLayout>
+                <ImageButton
+                    android:layout_width="@dimen/statusImage_size"
+                    android:layout_height="@dimen/statusImage_size"
+                    android:layout_marginStart="@dimen/marginStart"
+                    android:background="@drawable/round_corner"
+                    android:contentDescription="@string/red_card"
+                    android:onClick="awayRed"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/red_card_flip" />
 
-        <LinearLayout
-            android:id="@+id/awayTeam_icons"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:orientation="vertical">
+                <ImageButton
+                    android:layout_width="@dimen/statusImage_size"
+                    android:layout_height="@dimen/statusImage_size"
+                    android:layout_marginStart="@dimen/marginStart"
+                    android:background="@drawable/round_corner"
+                    android:contentDescription="@string/subs"
+                    android:onClick="awaySub"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/sub_flip" />
 
-            <ImageButton
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/round_corner"
-                android:contentDescription="@string/possession"
-                android:onClick="awayPos"
-                android:scaleType="fitCenter"
-                android:src="@drawable/possession" />
+                <ImageButton
+                    android:layout_width="@dimen/statusImage_size"
+                    android:layout_height="@dimen/statusImage_size"
+                    android:layout_marginStart="@dimen/marginStart"
+                    android:background="@drawable/round_corner"
+                    android:contentDescription="@string/corner_kicks"
+                    android:onClick="awayCK"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/corner_kick_flip" />
+            </LinearLayout>
 
-            <ImageButton
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/round_corner"
-                android:contentDescription="@string/yellow_card"
-                android:onClick="awayYellow"
-                android:scaleType="fitCenter"
-                android:src="@drawable/yellow_card_flip" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@id/awayTeam_icons"
+                android:orientation="vertical">
 
-            <ImageButton
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/round_corner"
-                android:contentDescription="@string/red_card"
-                android:onClick="awayRed"
-                android:scaleType="fitCenter"
-                android:src="@drawable/red_card_flip" />
+                <TextView
+                    android:id="@+id/pos_away"
+                    android:layout_width="@dimen/infoView_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/marginBottom"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner3"
+                    android:text="@string/initialPos"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/textSize" />
 
-            <ImageButton
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/round_corner"
-                android:contentDescription="@string/subs"
-                android:onClick="awaySub"
-                android:scaleType="fitCenter"
-                android:src="@drawable/sub_flip" />
+                <TextView
+                    android:id="@+id/yel_away"
+                    android:layout_width="@dimen/infoView_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/marginBottom"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner3"
+                    android:text="@string/initial"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/textSize" />
 
-            <ImageButton
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/round_corner"
-                android:contentDescription="@string/corner_kicks"
-                android:onClick="awayCK"
-                android:scaleType="fitCenter"
-                android:src="@drawable/corner_kick_flip" />
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/red_away"
+                    android:layout_width="@dimen/infoView_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/marginBottom"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner3"
+                    android:text="@string/initial"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/textSize" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_toStartOf="@id/awayTeam_icons"
-            android:orientation="vertical">
+                <TextView
+                    android:id="@+id/subs_away"
+                    android:layout_width="@dimen/infoView_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/marginBottom"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner3"
+                    android:text="@string/initial"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/textSize" />
 
-            <TextView
-                android:id="@+id/pos_away"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="11dp"
-                android:layout_weight="1"
-                android:background="@drawable/round_corner3"
-                android:text="@string/initialPos"
-                android:textAlignment="center"
-                android:textSize="30sp" />
+                <TextView
+                    android:id="@+id/conner_away"
+                    android:layout_width="@dimen/infoView_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/marginBottom"
+                    android:layout_marginTop="@dimen/marginTop"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_corner3"
+                    android:text="@string/initial"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/textSize" />
+            </LinearLayout>
+        </RelativeLayout>
 
-            <TextView
-                android:id="@+id/yel_away"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="11dp"
-                android:layout_weight="1"
-                android:background="@drawable/round_corner3"
-                android:text="@string/initial"
-                android:textAlignment="center"
-                android:textSize="30sp" />
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="@dimen/reset_width"
+            android:layout_height="@dimen/scoreboardTextView_height"
+            android:layout_below="@id/infoHub"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/marginTop"
+            android:background="@drawable/round_corner2"
+            android:elevation="@dimen/resetElevation"
+            android:onClick="reset"
+            android:text="@string/reset"
+            android:textAllCaps="true"
+            android:textSize="@dimen/reset_textSize" />
 
-            <TextView
-                android:id="@+id/red_away"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="11dp"
-                android:layout_weight="1"
-                android:background="@drawable/round_corner3"
-                android:text="@string/initial"
-                android:textAlignment="center"
-                android:textSize="30sp" />
+        <ImageView
+            android:layout_width="@dimen/leagueImage_size"
+            android:layout_height="@dimen/leagueImage_size"
+            android:layout_below="@id/resetButton"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/marginBottom"
+            android:contentDescription="@string/Logo_league"
+            android:src="@drawable/icon" />
 
-            <TextView
-                android:id="@+id/subs_away"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="11dp"
-                android:layout_weight="1"
-                android:background="@drawable/round_corner3"
-                android:text="@string/initial"
-                android:textAlignment="center"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/conner_away"
-                android:layout_width="90dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginTop="11dp"
-                android:layout_weight="1"
-                android:background="@drawable/round_corner3"
-                android:text="@string/initial"
-                android:textAlignment="center"
-                android:textSize="30sp" />
-        </LinearLayout>
     </RelativeLayout>
-
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="49dp"
-        android:layout_below="@id/infoHub"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/round_corner2"
-        android:elevation="8dp"
-        android:onClick="reset"
-        android:text="@string/reset"
-        android:textAllCaps="true"
-        android:textSize="25sp" />
-
-    <ImageView
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="@string/Logo_league"
-        android:src="@drawable/icon" />
-</RelativeLayout>
+</ScrollView>
